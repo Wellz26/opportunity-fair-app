@@ -1,4 +1,3 @@
-<!-- service-worker.js -->
 const CACHE_NAME = 'opportunity-fair-cache-v1';
 const urlsToCache = [
   '/',
