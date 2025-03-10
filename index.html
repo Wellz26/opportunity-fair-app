@@ -32,12 +32,12 @@
       switch(section) {
         case 'registerVendor':
           content.innerHTML = `<h2>Vendor Registration</h2>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEXAMPLE_VENDOR_FORM/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfqA56A4nO0-vTZCS0UQ4J7S_mkx_ejM9tJU4UCra_a3_NKg/viewform?embedded=true" width="640" height="1247" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
           break;
 
         case 'registerStudent':
           content.innerHTML = `<h2>Student Registration</h2>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEXAMPLE_STUDENT_FORM/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTG649f-MsTXtgDw70sccLMJWTYTZNUkPi5YVkK516o3yTIA/viewform?embedded=true" width="640" height="1081" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
           break;
 
         case 'directory':
@@ -65,7 +65,6 @@
       document.getElementById('btnDirectory').addEventListener('click', () => navigate('directory'));
       document.getElementById('btnResources').addEventListener('click', () => navigate('resources'));
 
-      // PWA Service Worker registration
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
           .then(reg => console.log('Service Worker registered!', reg))
@@ -75,3 +74,4 @@
   </script>
 </body>
 </html>
+
