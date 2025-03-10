@@ -15,10 +15,10 @@
   </header>
 
   <nav>
-    <button onclick="navigate('registerVendor')">Vendor Registration</button>
-    <button onclick="navigate('registerStudent')">Student Registration</button>
-    <button onclick="navigate('directory')">Vendor Directory</button>
-    <button onclick="navigate('resources')">Tips & Resources</button>
+    <button id="btnVendor">Vendor Registration</button>
+    <button id="btnStudent">Student Registration</button>
+    <button id="btnDirectory">Vendor Directory</button>
+    <button id="btnResources">Tips & Resources</button>
   </nav>
 
   <main id="content">
@@ -59,3 +59,19 @@
       }
     }
 
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('btnVendor').addEventListener('click', () => navigate('registerVendor'));
+      document.getElementById('btnStudent').addEventListener('click', () => navigate('registerStudent'));
+      document.getElementById('btnDirectory').addEventListener('click', () => navigate('directory'));
+      document.getElementById('btnResources').addEventListener('click', () => navigate('resources'));
+
+      // PWA Service Worker registration
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered!', reg))
+          .catch(err => console.log('Service Worker failed', err));
+      }
+    });
+  </script>
+</body>
+</html>
