@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4CAF50" />
+  <title>Hoover Opportunity Fair</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hoover High School Opportunity Fair</h1>
+    <p>Explore Jobs, Education, and Enlistment Opportunities!</p>
+  </header>
+
+  <nav>
+    <button onclick="navigate('registerVendor')">Vendor Registration</button>
+    <button onclick="navigate('registerStudent')">Student Registration</button>
+    <button onclick="navigate('directory')">Vendor Directory</button>
+    <button onclick="navigate('resources')">Tips & Resources</button>
+  </nav>
+
+  <main id="content">
+    <h2>Welcome!</h2>
+    <p>Plan your future with the Hoover Opportunity Fair.</p>
+  </main>
+
+  <script>
+    function navigate(section) {
+      const content = document.getElementById('content');
+      switch(section) {
+        case 'registerVendor':
+          content.innerHTML = `<h2>Vendor Registration</h2>
+          <form>
+            <label>Company Name: <input type="text"></label><br>
+            <label>Contact Email: <input type="email"></label><br>
+            <label>Opportunities: <textarea></textarea></label><br>
+            <button type="submit">Register</button>
+          </form>`;
+          break;
+
+        case 'registerStudent':
+          content.innerHTML = `<h2>Student Registration</h2>
+          <form>
+            <label>Student Name: <input type="text"></label><br>
+            <label>School: <input type="text"></label><br>
+            <label>Interest Area: <input type="text"></label><br>
+            <button type="submit">Register</button>
+          </form>`;
+          break;
+
+        case 'directory':
+          content.innerHTML = `<h2>Vendor Directory</h2>
+          <ul>
+            <li><strong>Company A</strong> - Hiring for internships!</li>
+            <li><strong>Company B</strong> - Enlistment opportunities available.</li>
+            <li><strong>Company C</strong> - Offering scholarships.</li>
+          </ul>`;
+          break;
+
+        case 'resources':
+          content.innerHTML = `<h2>Resume & Interview Tips</h2>
+          <ul>
+            <li><a href="#">How to Write a Winning Resume (PDF)</a></li>
+            <li><a href="#">Top 10 Interview Tips (Video)</a></li>
+          </ul>`;
+          break;
+      }
+    }
+
+    // PWA Service Worker registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('Service Worker registered!', reg))
+          .catch(err => console.log('Service Worker failed', err));
+      });
+    }
+  </script>
+</body>
+</html>
+
