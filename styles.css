@@ -25,6 +25,7 @@ nav button {
   border: none;
   padding: 1em;
   cursor: pointer;
+  flex: 1;
 }
 
 nav button:hover {
@@ -35,16 +36,34 @@ main {
   padding: 1em;
 }
 
-form label {
-  display: block;
-  margin: 0.5em 0;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 0.5em;
-  margin-top: 0.25em;
-  box-sizing: border-box;
+ul li {
+  background: white;
+  margin: 0.5em 0;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+iframe {
+  border: none;
+}
+
+h2 {
+  color: #333;
 }
 
 button[type="submit"] {
