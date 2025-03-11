@@ -1,39 +1,68 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f0f2f5;
   color: #333;
 }
 
 header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 1em;
+  background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
+  color: #fff;
+  padding: 2em 1em;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+header p {
+  margin: 0.5em 0 0;
+  font-size: 1.2em;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
-  background-color: #333;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav button {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 1em;
+  padding: 1em 2em;
+  margin: 0.5em;
   cursor: pointer;
-  flex: 1;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 nav button:hover {
-  background-color: #45a049;
+  background-color: #388e3c;
+  transform: translateY(-2px);
 }
 
 main {
-  padding: 1em;
+  padding: 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #4CAF50;
+  display: inline-block;
+  padding-bottom: 0.3em;
 }
 
 ul {
@@ -43,15 +72,21 @@ ul {
 
 ul li {
   background: white;
-  margin: 0.5em 0;
-  padding: 1em;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 1em 0;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+
+ul li:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 a {
   color: #4CAF50;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
@@ -59,23 +94,51 @@ a:hover {
 }
 
 iframe {
-  border: none;
-}
-
-h2 {
-  color: #333;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 button[type="submit"] {
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 0.75em 1.5em;
+  padding: 1em 2em;
   margin-top: 1em;
   cursor: pointer;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav button {
+    width: 90%;
+    margin: 0.5em auto;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
 }
 
