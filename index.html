@@ -7,6 +7,7 @@
   <title>Hoover Opportunity Fair</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -31,30 +32,42 @@
       const content = document.getElementById('content');
       switch(section) {
         case 'registerVendor':
-          content.innerHTML = `<h2>Vendor Registration</h2>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfqA56A4nO0-vTZCS0UQ4J7S_mkx_ejM9tJU4UCra_a3_NKg/viewform?embedded=true" width="640" height="1247" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+          content.innerHTML = `
+          <h2>Vendor Registration</h2>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfqA56A4nO0-vTZCS0UQ4J7S_mkx_ejM9tJU4UCra_a3_NKg/viewform?embedded=true" width="100%" height="1247" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          `;
           break;
 
         case 'registerStudent':
-          content.innerHTML = `<h2>Student Registration</h2>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTG649f-MsTXtgDw70sccLMJWTYTZNUkPi5YVkK516o3yTIA/viewform?embedded=true" width="640" height="1081" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+          content.innerHTML = `
+          <h2>Student Registration</h2>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfTG649f-MsTXtgDw70sccLMJWTYTZNUkPi5YVkK516o3yTIA/viewform?embedded=true" width="100%" height="1081" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          `;
           break;
 
         case 'directory':
-          content.innerHTML = `<h2>Vendor Directory</h2>
+          content.innerHTML = `
+          <h2>Vendor Directory</h2>
           <ul>
             <li><strong>Company A</strong> - Hiring for internships!</li>
             <li><strong>Company B</strong> - Enlistment opportunities available.</li>
             <li><strong>Company C</strong> - Offering scholarships.</li>
-          </ul>`;
+          </ul>
+          `;
           break;
 
         case 'resources':
-          content.innerHTML = `<h2>Resume & Interview Tips</h2>
+          content.innerHTML = `
+          <h2>Resume & Interview Tips</h2>
           <ul>
             <li><a href="#">How to Write a Winning Resume (PDF)</a></li>
             <li><a href="#">Top 10 Interview Tips (Video)</a></li>
-          </ul>`;
+          </ul>
+          `;
+          break;
+
+        default:
+          content.innerHTML = `<h2>Welcome!</h2><p>Plan your future with the Hoover Opportunity Fair.</p>`;
           break;
       }
     }
